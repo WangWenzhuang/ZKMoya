@@ -7,7 +7,7 @@
 ![CocoaPods](https://img.shields.io/badge/pod-v1.0-brightgreen.svg)
 ![platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
 
-将 [Moya](https://github.com/Moya/Moya)、[ZKProgressHUD](https://github.com/WangWenzhuang/ZKProgressHUD)、[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)、[ZKStatusBarNotification](https://github.com/WangWenzhuang/ZKStatusBarNotification) 封装，简化网络请求代码
+将 [Moya](https://github.com/Moya/Moya)、[ZKProgressHUD](https://github.com/WangWenzhuang/ZKProgressHUD)、[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) 封装，简化网络请求代码
 
 Moya 请求代码
 
@@ -33,7 +33,7 @@ myApi.ZKRequestHUD(.list, success: { json in
 })
 ```
 
-上面代码中的 *json* 是 JSON 类型，请查看[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
+上面代码中的 *json* 是 JSON 类型，请查看 [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 
 ## 运行环境
 
