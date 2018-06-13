@@ -3,8 +3,8 @@
 # ZKAlamofire
 
 ![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)
-![build](https://www.travis-ci.org/WangWenzhuang/ZKAlamofire.svg?branch=master)
-![CocoaPods](https://img.shields.io/badge/pod-v1.0-brightgreen.svg)
+![build](https://img.shields.io/badge/license-MIT-brightgreen.svg)
+![CocoaPods](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
 
 将 [Moya](https://github.com/Moya/Moya)、[ZKProgressHUD](https://github.com/WangWenzhuang/ZKProgressHUD)、[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) 封装，简化网络请求代码
