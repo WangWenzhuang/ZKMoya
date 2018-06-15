@@ -13,7 +13,7 @@ import ZKProgressHUD
 public extension MoyaProvider {
     public typealias requestSuccess = (_ json: JSON) -> Void
     public typealias requestFailure = () -> Void
-    
+
     private func request(
         _ token: Target,
         success: requestSuccess? = nil,
@@ -43,7 +43,7 @@ public extension MoyaProvider {
             }
         }
     }
-    
+
     /// 网络请求
     func ZKRequest(
         _ token: Target,
@@ -52,7 +52,7 @@ public extension MoyaProvider {
         ) {
         self.request(token, success: success, failure: failure, isShowHUD: false)
     }
-    
+
     /// 网络请求并且显示 HUD
     func ZKRequestHUD(
         _ token: Target,
