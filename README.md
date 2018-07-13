@@ -4,7 +4,7 @@
 
 ![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 ![build](https://img.shields.io/badge/license-MIT-brightgreen.svg)
-![CocoaPods](https://img.shields.io/badge/pod-v1.2-brightgreen.svg)
+![CocoaPods](https://img.shields.io/badge/pod-v1.3-brightgreen.svg)
 ![platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
 
 将 [Moya](https://github.com/Moya/Moya)、[ZKProgressHUD](https://github.com/WangWenzhuang/ZKProgressHUD)、[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) 封装，简化网络请求代码

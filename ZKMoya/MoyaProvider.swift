@@ -36,7 +36,7 @@ public extension MoyaProvider {
             var isFailure = false
             switch result {
             case let .success(response):
-                var isSuccess = true
+                var isSuccess = false
                 if let block = ZKMoyaConfig.responseCheck {
                     switch block(response) {
                     case .success:
