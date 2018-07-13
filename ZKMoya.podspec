@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ZKMoya'
-  s.version = '1.0'
+  s.version = '1.1'
   s.ios.deployment_target = '8.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = '包含 HUD 的网络请求框架，Moya 二次封装'

@@ -27,13 +27,22 @@ public extension MoyaProvider {
             if isShowHUD {
                 ZKProgressHUD.dismiss()
             }
+            var isFailure = false
             switch result {
             case let .success(response):
-                if let block = success {
-                    block(JSON(response.data))
+                if let block = ZKMoyaConfig.responseCheck {
+                    isFailure = !block(response)
+                }
+                if !isFailure {
+                    if let block = success {
+                        block(JSON(response.data))
+                    }
                 }
             case let .failure(error):
                 print("ZKMoya error  ->  \(error)")
+                isFailure = true
+            }
+            if isFailure {
                 if isShowHUD {
                     ZKProgressHUD.showError(ZKMoyaConfig.requestFailureMsg)
                 }
