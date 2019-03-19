@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ZKMoya'
-  s.version = '1.3'
+  s.version = '2.0'
   s.ios.deployment_target = '8.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = '包含 HUD 的网络请求框架，Moya 二次封装'
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.description = '将 Moya、ZKProgressHUD、SwiftyJSON 封装，简化网络请求代码。'
   s.source_files = 'ZKMoya/**/*.swift'
   s.requires_arc = true
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
   s.dependency 'Moya'
   s.dependency 'SwiftyJSON'
   s.dependency 'ZKProgressHUD'

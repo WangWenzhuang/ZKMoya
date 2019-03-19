@@ -4,7 +4,7 @@
 
 ![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 ![build](https://img.shields.io/badge/license-MIT-brightgreen.svg)
-![CocoaPods](https://img.shields.io/badge/pod-v1.3-brightgreen.svg)
+![CocoaPods](https://img.shields.io/badge/pod-v2.0-brightgreen.svg)
 ![platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
 
 将 [Moya](https://github.com/Moya/Moya)、[ZKProgressHUD](https://github.com/WangWenzhuang/ZKProgressHUD)、[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) 封装，简化网络请求代码
@@ -39,7 +39,7 @@ myApi.ZKRequestHUD(.list, success: { json in
 
 * iOS 8.0 +
 * Xcode 8 +
-* Swift 4.0 +
+* Swift 4.2 +
 
 ## 安装
 

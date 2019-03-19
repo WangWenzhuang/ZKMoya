@@ -50,6 +50,8 @@ public extension MoyaProvider {
                             isFailure = true
                         }
                     }
+                } else {
+                    isSuccess = true
                 }
                 if isSuccess, let block = success {
                     block(JSON(response.data))
