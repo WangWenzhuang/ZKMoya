@@ -3,7 +3,6 @@
 # ZKMoya
 
 ![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)
-![build](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 ![CocoaPods](https://img.shields.io/badge/pod-v2.0-brightgreen.svg)
 ![platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
 
