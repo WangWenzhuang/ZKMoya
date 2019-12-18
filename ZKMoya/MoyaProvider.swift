@@ -26,7 +26,7 @@ public extension MoyaProvider {
         success: requestSuccess? = nil,
         failure: requestFailure? = nil,
         isShowHUD: Bool = false
-        ) {
+    ) {
         if isShowHUD {
             ZKProgressHUD.show()
         }
@@ -38,7 +38,7 @@ public extension MoyaProvider {
             switch result {
             case let .success(response):
                 var isSuccess = false
-                if let block = ZKMoyaConfig.responseCheck {
+                if let block = ZKMoya.responseCheck {
                     switch block(response) {
                     case .success:
                         isSuccess = true
@@ -63,7 +63,7 @@ public extension MoyaProvider {
             }
             if isFailure {
                 if isShowHUD {
-                    ZKMoyaConfig.showFailure()
+                    ZKMoya.showFailure()
                 }
                 if let block = failure {
                     block()
@@ -77,7 +77,7 @@ public extension MoyaProvider {
         _ token: Target,
         success: requestSuccess? = nil,
         failure: requestFailure? = nil
-        ) {
+    ) {
         self.request(token, success: success, failure: failure, isShowHUD: false)
     }
     
@@ -86,7 +86,7 @@ public extension MoyaProvider {
         _ token: Target,
         success: requestSuccess? = nil,
         failure: requestFailure? = nil
-        ) {
+    ) {
         self.request(token, success: success, failure: failure, isShowHUD: true)
     }
 }

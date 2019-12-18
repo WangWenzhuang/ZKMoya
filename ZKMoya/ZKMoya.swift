@@ -9,7 +9,7 @@
 import Moya
 import ZKProgressHUD
 
-public final class ZKMoyaConfig {
+public final class ZKMoya {
     /// HUD 请求失败，会显示此消息。默认为：连接服务器失败，请稍后再试
     public static var failureMsg = "连接服务器失败，请稍后再试"
     /// HUD 请求失败，会执行此方法

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A01DE26F20D11E450092091D /* ZKMoya.h in Headers */ = {isa = PBXBuildFile; fileRef = A01DE26120D11E450092091D /* ZKMoya.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A01DE27920D11F030092091D /* MoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01DE27820D11F030092091D /* MoyaProvider.swift */; };
-		A01DE27B20D121C30092091D /* ZKMoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01DE27A20D121C30092091D /* ZKMoyaConfig.swift */; };
+		A01DE27B20D121C30092091D /* ZKMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01DE27A20D121C30092091D /* ZKMoya.swift */; };
 		A2A1E1449403B4DAD89A300F /* Pods_ZKMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D7A998C59DC740896C4831 /* Pods_ZKMoya.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +21,7 @@
 		A01DE26120D11E450092091D /* ZKMoya.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKMoya.h; sourceTree = "<group>"; };
 		A01DE26220D11E450092091D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A01DE27820D11F030092091D /* MoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaProvider.swift; sourceTree = "<group>"; };
-		A01DE27A20D121C30092091D /* ZKMoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZKMoyaConfig.swift; sourceTree = "<group>"; };
+		A01DE27A20D121C30092091D /* ZKMoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZKMoya.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 				A01DE26120D11E450092091D /* ZKMoya.h */,
 				A01DE26220D11E450092091D /* Info.plist */,
 				A01DE27820D11F030092091D /* MoyaProvider.swift */,
-				A01DE27A20D121C30092091D /* ZKMoyaConfig.swift */,
+				A01DE27A20D121C30092091D /* ZKMoya.swift */,
 			);
 			path = ZKMoya;
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A01DE27B20D121C30092091D /* ZKMoyaConfig.swift in Sources */,
+				A01DE27B20D121C30092091D /* ZKMoya.swift in Sources */,
 				A01DE27920D11F030092091D /* MoyaProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
