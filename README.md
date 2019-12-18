@@ -3,7 +3,7 @@
 # ZKMoya
 
 ![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)
-![CocoaPods](https://img.shields.io/badge/pod-v2.0-brightgreen.svg)
+![CocoaPods](https://img.shields.io/badge/pod-v5.0-brightgreen.svg)
 ![platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
 
 将 [Moya](https://github.com/Moya/Moya)、[ZKProgressHUD](https://github.com/WangWenzhuang/ZKProgressHUD)、[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) 封装，简化网络请求代码
@@ -36,9 +36,9 @@ myApi.ZKRequestHUD(.list, success: { json in
 
 ## 运行环境
 
-* iOS 8.0 +
+* iOS 10.0 +
 * Xcode 8 +
-* Swift 4.2 +
+* Swift 5.0 +
 
 ## 安装
 
@@ -47,7 +47,7 @@ myApi.ZKRequestHUD(.list, success: { json in
 你可以使用 [CocoaPods](http://cocoapods.org/) 安装 `ZKMoya`，在你的 `Podfile` 中添加：
 
 ```ogdl
-platform :ios, '8.0'
+platform :ios, '10.0'
 use_frameworks!
 
 target 'MyApp' do
@@ -67,7 +67,12 @@ import ZKMoya
 
 ```swift
 /// 如果不设置，默认值是："连接服务器失败，请稍后再试"
-ZKMoyaConfig.requestFailureMsg = "请求出错，请稍后再试"
+ZKMoyaConfig.failureMsg = "请求出错，请稍后再试"
+
+/// 如果不设置，默认值是：ZKProgressHUD.showError(failureMsg)
+ZKMoyaConfig.showFailure = {
+    // 自定义请求失败
+}
 ```
 
 ### 显示 HUD 请求
@@ -101,3 +106,24 @@ myApi.ZKRequest(.list, success: { json in
 ### 自定义 HUD 样式
 
 自定义需要添加 [ZKProgressHUD](https://github.com/WangWenzhuang/ZKProgressHUD) ，之后设置其样式即可
+
+### 接口未完成的情况下，可以使用 ZKSimulate 和 ZKSimulateHUD 进行接口模拟
+
+在 sampleData 中根据接口返回对应的 JSON 数据 
+
+```swift
+var sampleData: Data {
+    switch self {
+    case .list:
+        return "{\"message\":\"\",\"error_code\":0,\"data\":[{\"id\":1,\"title\":\"哼哼哈嘿\"}]}".data(using: String.Encoding.utf8)!
+    }
+}
+```
+
+使用
+
+```swift
+myApi.ZKSimulateHUD(.list, success: { json in
+	/// 你的代码
+})
+```

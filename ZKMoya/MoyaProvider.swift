@@ -7,6 +7,7 @@
 //
 
 import Moya
+import Async
 import SwiftyJSON
 import ZKProgressHUD
 
@@ -17,8 +18,8 @@ public enum ZKCheckStatus {
 }
 
 public extension MoyaProvider {
-    public typealias requestSuccess = (_ json: JSON) -> Void
-    public typealias requestFailure = () -> Void
+    typealias requestSuccess = (_ json: JSON) -> Void
+    typealias requestFailure = () -> Void
     
     private func request(
         _ token: Target,
@@ -62,7 +63,7 @@ public extension MoyaProvider {
             }
             if isFailure {
                 if isShowHUD {
-                    ZKProgressHUD.showError(ZKMoyaConfig.requestFailureMsg)
+                    ZKMoyaConfig.showFailure()
                 }
                 if let block = failure {
                     block()
@@ -87,5 +88,45 @@ public extension MoyaProvider {
         failure: requestFailure? = nil
         ) {
         self.request(token, success: success, failure: failure, isShowHUD: true)
+    }
+}
+
+public extension MoyaProvider {
+    private func simulate(
+        _ token: Target,
+        success: requestSuccess? = nil,
+        failure: requestFailure? = nil,
+        isShowHUD: Bool = false
+    ) {
+        guard let block = success else {
+            return
+        }
+        if isShowHUD {
+            ZKProgressHUD.show()
+            Async.main(after: 0.5) {
+                ZKProgressHUD.dismiss()
+                block(JSON(token.sampleData))
+            }
+        } else {
+            block(JSON(token.sampleData))
+        }
+    }
+    
+    /// 模拟网络请求
+    func ZKSimulate(
+        _ token: Target,
+        success: requestSuccess? = nil,
+        failure: requestFailure? = nil
+    ) {
+        simulate(token, success: success, failure: failure, isShowHUD: false)
+    }
+    
+    /// 模拟网络请求并且显示 HUD
+    func ZKSimulateHUD(
+        _ token: Target,
+        success: requestSuccess? = nil,
+        failure: requestFailure? = nil
+    ) {
+        simulate(token, success: success, failure: failure, isShowHUD: true)
     }
 }
